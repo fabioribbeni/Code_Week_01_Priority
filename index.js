@@ -13,13 +13,20 @@ async function loadData() {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos");
     const users = await response.json();
     //Aggiungo il parametro priority
-    userList = users.map((user) => {
+    return users.map((user) => {
         return {
             ...user,
             priority: Math.floor(Math.random() * 6)
         }
     });
-    //Ordino i dati per priorità
+}
+
+async function renderData() {
+    userList = await loadData();
+    createCards();
+}
+
+function createCards() {
     userList.sort(function (a, b) {
         return b.priority - a.priority;
     });
@@ -47,6 +54,6 @@ async function loadData() {
         thirdTier.appendChild(userCard);
 
     });
-}
+};
 
-loadData();
+document.addEventListener("DOMContentLoaded", renderData, { once: true })

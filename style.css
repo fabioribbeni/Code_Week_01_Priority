@@ -1,16 +1,52 @@
 *{
-
+font-family: 'Open Sans', sans-serif;
 }
 
 .firstTier{
+    display: flex;
+    flex: auto;
+    overflow: scroll;
     border: 1px 0px solid red;
     background-color: red;
 }
+.firstTier div{
+    border-radius: 20%;
+    max-height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.secondTier div{
+    border-radius: 20%;
+    max-height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.thirdTier div{
+    border-radius: 20%;
+    max-height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .secondTier{
+    display: flex;
+    flex: auto;
+    overflow: scroll;
     border: 1px 0px solid red;
     background-color: yellow;
 }
 .thirdTier{
+    display: flex;
+    flex: auto;
+    overflow: scroll;
     border: 1px 0px solid red;
     background-color: green;
 }
@@ -18,4 +54,7 @@
 .userCard{
     display: block;
     border: 1px solid grey;
+}
+.hidden{
+    display: none;
 }
