@@ -1,0 +1,21 @@
+*{
+
+}
+
+.firstTier{
+    border: 1px 0px solid red;
+    background-color: red;
+}
+.secondTier{
+    border: 1px 0px solid red;
+    background-color: yellow;
+}
+.thirdTier{
+    border: 1px 0px solid red;
+    background-color: green;
+}
+
+.userCard{
+    display: block;
+    border: 1px solid grey;
+}
