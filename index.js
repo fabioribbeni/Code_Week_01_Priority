@@ -38,22 +38,37 @@ function createCards() {
     priorityHigh.forEach(user => {
         let userCard = document.createElement("div");
         userCard.classList.add("userCard");
-        let testo = userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
+        if (user.completed) {
+            userCard.classList.add("completed");
+        } else userCard.classList.add("toDo");
+        userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
         firstTier.appendChild(userCard);
     });
     priorityMedium.forEach(user => {
         let userCard = document.createElement("div");
         userCard.classList.add("userCard");
-        let testo = userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
+        if (user.completed) {
+            userCard.classList.add("completed");
+        } else userCard.classList.add("toDo");
+        userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
         secondTier.appendChild(userCard);
     });
     priorityLow.forEach(user => {
         let userCard = document.createElement("div");
         userCard.classList.add("userCard");
-        let testo = userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
+        if (user.completed) {
+            userCard.classList.add("completed");
+        } else userCard.classList.add("toDo");
+        userCard.textContent = `Priorità: ${user.priority} - ID :${user.id} - Descrizione: ${user.title}`;
         thirdTier.appendChild(userCard);
 
     });
 };
 
+function toggleShowCompleted() {
+    let userCard = document.querySelectorAll(".toDo");
+    userCard.forEach(element => element.classList.toggle("hidden"));
+};
+
+btn.addEventListener("click", toggleShowCompleted)
 document.addEventListener("DOMContentLoaded", renderData, { once: true })

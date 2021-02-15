@@ -58,3 +58,7 @@ font-family: 'Open Sans', sans-serif;
 .hidden{
     display: none;
 }
+
+.completed{
+    border: 1px solid gold;
+}
