@@ -1,33 +1,35 @@
-*{
-font-family: 'Open Sans', sans-serif;
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #4593e3;
+}
+header{
+    margin: 25px;
+    text-align: center;
+}
+header h1 {
+    display: inline;
+    right: auto;
+    color: white;
+    font-weight: 700;
+    width:fit-content;
+    border-radius: 20px;
+    border: 3px solid #226fbe;
+    padding: 5px 10px;
+
 }
 
 .firstTier{
     display: flex;
     flex: auto;
     overflow: scroll;
-    border: 1px 0px solid red;
-    background-color: red;
+    background-color: #f06060;
+    margin: 10px 0px;
+    border: 3px solid #aeaeae;
+    border-radius: 3px;
+    padding: 5px;
+
 }
 .firstTier div{
-    border-radius: 20%;
-    max-height: 80px;
-    min-width: 80px;
-    padding: 10px;
-    margin: 10px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-.secondTier div{
-    border-radius: 20%;
-    max-height: 80px;
-    min-width: 80px;
-    padding: 10px;
-    margin: 10px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-.thirdTier div{
     border-radius: 20%;
     max-height: 80px;
     min-width: 80px;
@@ -40,15 +42,40 @@ font-family: 'Open Sans', sans-serif;
     display: flex;
     flex: auto;
     overflow: scroll;
-    border: 1px 0px solid red;
-    background-color: yellow;
+    background-color: #fcd04b;
+    margin: 10px 0px;
+    border: 3px solid #aeaeae;
+    border-radius: 3px;
+    padding: 5px;
+}
+.secondTier div{
+    border-radius: 20%;
+    max-height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .thirdTier{
     display: flex;
     flex: auto;
     overflow: scroll;
-    border: 1px 0px solid red;
-    background-color: green;
+    background-color: #2ac56c;
+    border: 3px solid #aeaeae;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px 0px;
+
+}
+.thirdTier div{
+    border-radius: 20%;
+    max-height: 80px;
+    min-width: 80px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .userCard{
@@ -62,3 +89,27 @@ font-family: 'Open Sans', sans-serif;
 .completed{
     border: 1px solid gold;
 }
+
+.btnCompleted{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 20px;
+    border:solid 3px white;
+    padding:10px;
+    border-radius: 3px;
+    background-color: #226fbe;
+    width: 200px;
+    height: 50px;
+    height: fit-content;
+    transition: width 1s;
+
+}
+
+
+.showCompleted{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 350px;
+}
+

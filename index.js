@@ -5,7 +5,7 @@ let thirdTier = document.querySelector(".thirdTier");
 let firstUL = document.querySelector(".firstUL");
 let secondUL = document.querySelector(".secondUL");
 let thirdUL = document.querySelector(".thirdUL");
-let btn = document.querySelector("#favorite")
+let btn = document.querySelector(".btnCompleted")
 let userList = [];
 
 //Carico i dati dall'API
@@ -66,8 +66,14 @@ function createCards() {
 };
 
 function toggleShowCompleted() {
+    if (btn.innerHTML === "Mostra solo completati") {
+        btn.innerHTML = "Mostra tutti"
+    } else btn.innerHTML = "Mostra solo completati";
+
     let userCard = document.querySelectorAll(".toDo");
     userCard.forEach(element => element.classList.toggle("hidden"));
+    btn.classList.toggle("showCompleted");
+
 };
 
 btn.addEventListener("click", toggleShowCompleted)
